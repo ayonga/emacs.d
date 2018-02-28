@@ -1,8 +1,9 @@
 ;; WAITING: haskell-mode sets tags-table-list globally, breaks tags-completion-at-point-function
 ;; TODO Default sort order should place [a-z] before punctuation
 
+;;; Code:
 (setq tab-always-indent 'complete)
-(add-to-list 'completion-styles 'initials t)
+;; (add-to-list 'completion-styles 'initials t)
 
 (when (maybe-require-package 'company)
   (add-hook 'after-init-hook 'global-company-mode)
@@ -41,7 +42,6 @@
     (add-hook 'company-completion-started-hook 'sanityinc/page-break-lines-disable)
     (add-hook 'company-completion-finished-hook 'sanityinc/page-break-lines-maybe-reenable)
     (add-hook 'company-completion-cancelled-hook 'sanityinc/page-break-lines-maybe-reenable)))
-
 
 
 (provide 'init-company)
