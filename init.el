@@ -1,9 +1,11 @@
-;; -*- lexical-binding: t -*-
-(setq debug-on-error t)
+;;; -*- lexical-binding: t -*-
+;;; package -- Summary
 
+;;; Commentary:
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
+;;; Code:
 (let ((minver "24.3"))
   (when (version< emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
@@ -13,9 +15,10 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
 
-(defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
+(defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
-
+(defconst *is-a-linux* (eq system-type 'gnu/linux))
+(defconst *is-a-windows* (eq system-type 'windows-nt))
 ;;----------------------------------------------------------------------------
 ;; Adjust garbage collection thresholds during startup, and thereafter
 ;;----------------------------------------------------------------------------
@@ -23,7 +26,8 @@
       (init-gc-cons-threshold (* 128 1024 1024)))
   (setq gc-cons-threshold init-gc-cons-threshold)
   (add-hook 'after-init-hook
-            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+            (lambda ()
+              (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
@@ -38,7 +42,7 @@
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
 ;;----------------------------------------------------------------------------
-(require 'init-preload-local nil t)
+;;(require 'init-preload-local nil t)
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -52,7 +56,7 @@
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
+;;(require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-dired)
 (require 'init-isearch)
@@ -64,7 +68,7 @@
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
-;;(require 'init-helm)
+;;;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
@@ -76,40 +80,39 @@
 (require 'init-whitespace)
 
 (require 'init-vc)
-(require 'init-darcs)
+;;(require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
 
 (require 'init-projectile)
-
 (require 'init-compile)
 ;;(require 'init-crontab)
-(require 'init-textile)
+;;(require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
-(require 'init-javascript)
-(require 'init-php)
+;;(require 'init-erlang)
+;;(require 'init-javascript)
+;;(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
 (require 'init-css)
-(require 'init-haml)
-(require 'init-http)
+;;(require 'init-haml)
+;;(require 'init-http)
 (require 'init-python)
-(require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
-(require 'init-ruby)
-(require 'init-rails)
-(require 'init-sql)
-(require 'init-rust)
-(require 'init-toml)
+;;(require 'init-haskell)
+;;(require 'init-elm)
+;;(require 'init-purescript)
+;;(require 'init-ruby)
+;;(require 'init-rails)
+;;(require 'init-sql)
+;;(require 'init-rust)
+;;(require 'init-toml)
 (require 'init-yaml)
-(require 'init-docker)
-(require 'init-terraform)
+;;(require 'init-docker)
+;;(require 'init-terraform)
 ;;(require 'init-nix)
-(maybe-require-package 'nginx-mode)
+;;(maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
 (require 'init-lisp)
@@ -119,30 +122,44 @@
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
-  (require 'init-spelling))
+    (require 'init-spelling))
 
 (require 'init-misc)
 
 (require 'init-folding)
 (require 'init-dash)
 
-;;(require 'init-twitter)
-;; (require 'init-mu)
-(require 'init-ledger)
-;; Extra packages which don't require any configuration
+(require 'init-yasnippet)
 
-(require-package 'gnuplot)
-(require-package 'lua-mode)
-(require-package 'htmlize)
-(require-package 'dsvn)
-(when *is-a-mac*
-  (require-package 'osx-location))
+(require 'init-company-math)
+(require 'init-auctex)
+(require 'init-ivy-bibtex)
+(require 'init-org-ref)
+
+;; (require 'init-ros)
+(require 'init-matlab-mode)
+
+
+
+
+;;;;(require 'init-twitter)
+;;;; (require 'init-mu)
+;;(require 'init-ledger)
+;;;; Extra packages which don't require any configuration
+
+;; (require-package 'gnuplot)
+;; (require-package 'lua-mode)
+;; (require-package 'htmlize)
+;; (require-package 'dsvn)
+;; (when *is-a-mac*
+;; (require-package 'osx-location))
 (maybe-require-package 'regex-tool)
-(maybe-require-package 'dotenv-mode)
+;;(maybe-require-package 'dotenv-mode)
+(require-package 'midnight)
 
-(when (maybe-require-package 'uptimes)
-  (setq-default uptimes-keep-count 200)
-  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
+;;(when (maybe-require-package 'uptimes)
+;;  (setq-default uptimes-keep-count 200)
+;;  (add-hook 'after-init-hook (lambda () (require 'uptimes))))
 
 
 ;;----------------------------------------------------------------------------
@@ -178,3 +195,5 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+
+;;; init.el ends here
