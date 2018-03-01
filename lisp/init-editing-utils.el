@@ -37,10 +37,6 @@
 (add-hook 'after-init-hook 'transient-mark-mode)
 
 
-(when (maybe-require-package 'dynamic-spaces)
-  (dynamic-spaces-global-mode))
-
-
 
 ;; Huge files
 
