@@ -100,10 +100,20 @@
   (add-hook 'after-init-hook 'global-prettify-symbols-mode))
 
 
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 (require-package 'undo-tree)
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 (after-load 'undo-tree
   (diminish 'undo-tree-mode))
+;; autosave the undo-tree history
+(setq undo-tree-history-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq undo-tree-auto-save-history t)
 
 
 (when (maybe-require-package 'symbol-overlay)
@@ -132,7 +142,11 @@
 (after-load 'page-break-lines
   (push 'browse-kill-ring-mode page-break-lines-modes))
 
+;; use shift + arrow keys to switch between visible buffers
+(require-package 'windmove)
+(windmove-default-keybindings)
 
+(set-default 'imenu-auto-rescan t)
 ;;----------------------------------------------------------------------------
 ;; Don't disable narrowing commands
 ;;----------------------------------------------------------------------------
@@ -164,6 +178,8 @@
 ;;----------------------------------------------------------------------------
 (cua-selection-mode t)                  ; for rectangles, CUA is nice
 
+;; clean up obsolete buffers automatically
+(require-package 'midnight)
 
 ;;----------------------------------------------------------------------------
 ;; Handy key bindings

@@ -66,7 +66,7 @@
 (require 'init-flycheck)
 
 (require 'init-smartparens)
-(require 'init-sml)
+;; (require 'init-sml)
 
 (require 'init-recentf)
 (require 'init-smex)
