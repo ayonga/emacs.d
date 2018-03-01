@@ -174,6 +174,8 @@
 ;;----------------------------------------------------------------------------
 (cua-selection-mode t)                  ; for rectangles, CUA is nice
 
+(setq-default tab-width 8)
+
 ;; clean up obsolete buffers automatically
 (require-package 'midnight)
 
