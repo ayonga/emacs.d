@@ -23,6 +23,9 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
 
+;; delete selected region
+(global-set-key (kbd "<delete>") 'delete-region)
+;; (global-set-key (kbd "<backspace>") 'delete-region)
 
 ;;(setq tab-width 4)
 (setq-default fill-column 80)
