@@ -65,6 +65,9 @@
 (require 'init-ibuffer)
 (require 'init-flycheck)
 
+(require 'init-smartparens)
+(require 'init-sml)
+
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
@@ -114,7 +117,7 @@
 ;;(require 'init-nix)
 ;;(maybe-require-package 'nginx-mode)
 
-(require 'init-paredit)
+;; (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
 (require 'init-clojure)

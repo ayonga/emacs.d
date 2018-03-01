@@ -73,6 +73,7 @@ instead."
 
     (define-key ivy-mode-map (kbd "M-s /") 'sanityinc/swiper-at-point)))
 
+(setq counsel-find-file-at-point t)
 
 (when (maybe-require-package 'ivy-xref)
   (setq xref-show-xrefs-function 'ivy-xref-show-xrefs))

@@ -18,7 +18,6 @@
 (global-hl-line-mode t)
 
 
-
 ;; sensible undo
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-z") 'undo)
@@ -27,10 +26,6 @@
 
 ;;(setq tab-width 4)
 (setq-default fill-column 80)
-
-
-;; disable backup files
-(setq make-backup-files nil)
 
 
 (provide 'init-local)
