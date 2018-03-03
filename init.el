@@ -152,12 +152,12 @@
 
 ;; (require-package 'gnuplot)
 ;; (require-package 'lua-mode)
-;; (require-package 'htmlize)
+(require-package 'htmlize)
 ;; (require-package 'dsvn)
 ;; (when *is-a-mac*
 ;; (require-package 'osx-location))
 (maybe-require-package 'regex-tool)
-;;(maybe-require-package 'dotenv-mode)
+(maybe-require-package 'dotenv-mode)
 (require-package 'midnight)
 
 ;;(when (maybe-require-package 'uptimes)
@@ -171,6 +171,9 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+(require 'init-pdf-tools)
+(require 'init-interleave)
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
