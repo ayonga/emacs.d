@@ -88,6 +88,7 @@
 (require 'init-github)
 
 (require 'init-projectile)
+
 (require 'init-compile)
 ;;(require 'init-crontab)
 ;;(require 'init-textile)
@@ -125,7 +126,7 @@
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
-    (require 'init-spelling))
+  (require 'init-spelling))
 
 (require 'init-misc)
 
