@@ -137,6 +137,9 @@
 (require 'init-company-math)
 (require 'init-auctex)
 (require 'init-ivy-bibtex)
+
+(require 'init-pdf-tools)
+(require 'init-interleave)
 (require 'init-org-ref)
 
 ;; (require 'init-ros)
@@ -172,8 +175,6 @@
 (unless (server-running-p)
   (server-start))
 
-(require 'init-pdf-tools)
-(require 'init-interleave)
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
