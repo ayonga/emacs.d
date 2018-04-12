@@ -14,5 +14,9 @@
            " Proj"
          (format " Proj[%s]" (projectile-project-name)))))))
 
+;;Configuration for Windows
+(when *is-a-windows*
+  (setq projectile-indexing-method 'alien))
+
 
 (provide 'init-projectile)

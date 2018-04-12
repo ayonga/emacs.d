@@ -1,6 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 (require-package 'org-ref)
-(require-package 'org-plus-contrib)
+;;(require-package 'org-plus-contrib)
 
 
 (setq org-ref-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib")

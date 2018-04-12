@@ -2,6 +2,10 @@
 (setq user-full-name "Ayonga Hereid")
 (setq user-mail-address "ayonga27@gmail.com")
 
+(when *is-a-windows*
+  (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")  ; add aspell directory to emacs configuration
+  (setq grep-find-command '("findstr /sn  *" . 13))
+  (setq default-directory "~/"))
 
 ;;; custom UI setttings from Prelude
 

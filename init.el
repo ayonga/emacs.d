@@ -29,6 +29,13 @@
             (lambda ()
               (setq gc-cons-threshold normal-gc-cons-threshold))))
 
+;;
+;;  This makes Emacs ignore the "-e (make-frame-visible)"
+;;  that it gets passed when started by emacsclientw.
+;;
+(add-to-list 'command-switch-alist '("(make-frame-visible)" .
+                                     (lambda (s))))
+
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
@@ -75,7 +82,7 @@
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-;; (require 'init-sessions)
+(require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
 
