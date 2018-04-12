@@ -95,6 +95,7 @@
 (require 'init-github)
 
 (require 'init-projectile)
+
 (require 'init-compile)
 ;;(require 'init-crontab)
 ;;(require 'init-textile)
@@ -132,7 +133,7 @@
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
-    (require 'init-spelling))
+  (require 'init-spelling))
 
 (require 'init-misc)
 
@@ -144,6 +145,9 @@
 (require 'init-company-math)
 (require 'init-auctex)
 (require 'init-ivy-bibtex)
+
+(require 'init-pdf-tools)
+(require 'init-interleave)
 (require 'init-org-ref)
 
 ;; (require 'init-ros)
@@ -159,12 +163,12 @@
 
 ;; (require-package 'gnuplot)
 ;; (require-package 'lua-mode)
-;; (require-package 'htmlize)
+(require-package 'htmlize)
 ;; (require-package 'dsvn)
 ;; (when *is-a-mac*
 ;; (require-package 'osx-location))
 (maybe-require-package 'regex-tool)
-;;(maybe-require-package 'dotenv-mode)
+(maybe-require-package 'dotenv-mode)
 (require-package 'midnight)
 
 ;;(when (maybe-require-package 'uptimes)
@@ -178,6 +182,7 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface

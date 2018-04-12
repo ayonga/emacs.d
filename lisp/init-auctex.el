@@ -20,9 +20,9 @@
       (list 'auto-fill-mode
             'LaTeX-math-mode
             'turn-on-reftex
+            'smartparens-mode
             'visual-line-mode
-            'turn-on-cdlatex
-            'linum-mode))
+            'turn-on-cdlatex))
 
 (setq reftex-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib"))
 

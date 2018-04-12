@@ -17,7 +17,7 @@
 (setq bibtex-completion-notes-symbol "✎")
 
 
-(setq bibtex-completion-notes-template-one-file "\n* ${title}\n  :PROPERTIES:\n  :Custom_ID: ${=key=}\n  :Author: ${author}\n  :Year: ${year}\n  :END:\n\n")
+(setq bibtex-completion-notes-template-one-file "\n* ${title}\n  :PROPERTIES:\n  :Custom_ID: ${=key=}\n  :INTERLEAVE_PDF: pdfs/${=key=}.pdf\n  :Author: ${author}\n  :Year: ${year}\n  :END:\n\n")
 
 (setq bibtex-completion-pdf-open-function
       (lambda (fpath)
