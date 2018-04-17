@@ -5,7 +5,7 @@
 
 (setq org-ref-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib")
       org-ref-pdf-directory "/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/pdfs/"
-      org-ref-bibliography-notes "/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/notes.org")
+      org-ref-bibliography-notes "/home/ayonga/Dropbox/notes/reference_notes.org")
 
 
 
