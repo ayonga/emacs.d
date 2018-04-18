@@ -104,12 +104,28 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
+(setq org-default-notes-file "/home/ayonga/Dropbox/notes/capture_notes.org")
+
+(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes")))
+
 (setq org-capture-templates
-      `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
-         "* NEXT %?\n%U\n" :clock-resume t)
-        ("n" "note" entry (file "")
-         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
-        ))
+      '(("t" "todo" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+         "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+        ("n" "note" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+         "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+        ("m" "Meeting" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+         "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
+        ("i" "Idea" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+         "* %? :IDEA: \n%U" :clock-in t :clock-resume t)
+        ("x" "Next Task" entry (file+headline "/home/ayonga/Dropbox/notes/capture_notes.org" "Tasks")
+         "** NEXT %? \nDEADLINE: %t") ))
+
+;; (setq org-capture-templates
+;;       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
+;;          "* NEXT %?\n%U\n" :clock-resume t)
+;;         ("n" "note" entry (file "")
+;;          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+;;         ))
 
 
 

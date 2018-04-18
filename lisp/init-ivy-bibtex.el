@@ -7,7 +7,7 @@
 (setq bibtex-completion-library-path
       '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/pdfs/"))
 
-(setq bibtex-completion-notes-path "/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/notes.org")
+(setq bibtex-completion-notes-path "/home/ayonga/Dropbox/notes/reference_notes.org")
 
 (setq bibtex-completion-pdf-field "file")
 
