@@ -146,7 +146,7 @@
 (require 'init-auctex)
 (require 'init-ivy-bibtex)
 
-(require 'init-pdf-tools)
+;;(require 'init-pdf-tools)
 (require 'init-interleave)
 (require 'init-org-ref)
 
@@ -163,7 +163,7 @@
 
 ;; (require-package 'gnuplot)
 ;; (require-package 'lua-mode)
-(require-package 'htmlize)
+;; (require-package 'htmlize)
 ;; (require-package 'dsvn)
 ;; (when *is-a-mac*
 ;; (require-package 'osx-location))
