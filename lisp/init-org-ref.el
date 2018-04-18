@@ -3,9 +3,9 @@
 ;;(require-package 'org-plus-contrib)
 
 
-(setq org-ref-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib")
-      org-ref-pdf-directory "/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/pdfs/"
-      org-ref-bibliography-notes "/home/ayonga/Dropbox/notes/reference_notes.org")
+(setq org-ref-default-bibliography '("d:/Dropbox/Dropbox (DynamicLegLocomotion)/TeamWide/Ayonga/Bibliography/reference.bib")
+      org-ref-pdf-directory "d:/Dropbox/Dropbox (DynamicLegLocomotion)/TeamWide/Ayonga/Bibliography/pdfs/"
+      org-ref-bibliography-notes "d:/Dropbox/Dropbox (Personal)/notes/reference_notes.org")
 
 
 

@@ -2,12 +2,12 @@
 (require-package 'ivy-bibtex)
 
 (setq bibtex-completion-bibliography
-      '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib"))
+      '("d:/Dropbox/Dropbox (DynamicLegLocomotion)/TeamWide/Ayonga/Bibliography/reference.bib"))
 
 (setq bibtex-completion-library-path
-      '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/pdfs/"))
+      '("d:/Dropbox/Dropbox (DynamicLegLocomotion)/TeamWide/Ayonga/Bibliography/pdfs/"))
 
-(setq bibtex-completion-notes-path "/home/ayonga/Dropbox/notes/reference_notes.org")
+(setq bibtex-completion-notes-path "d:/Dropbox/Dropbox (Personal)/notes/reference_notes.org")
 
 (setq bibtex-completion-pdf-field "file")
 

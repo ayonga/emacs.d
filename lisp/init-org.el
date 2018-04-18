@@ -104,20 +104,20 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-default-notes-file "/home/ayonga/Dropbox/notes/capture_notes.org")
+(setq org-default-notes-file "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org")
 
-(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes")))
+(setq org-agenda-files (quote ("d:/Dropbox/Dropbox (Personal)/notes")))
 
 (setq org-capture-templates
-      '(("t" "todo" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+      '(("t" "todo" entry (file "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org")
          "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-        ("n" "note" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+        ("n" "note" entry (file "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org")
          "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-        ("m" "Meeting" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+        ("m" "Meeting" entry (file "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org")
          "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
-        ("i" "Idea" entry (file "/home/ayonga/Dropbox/notes/capture_notes.org")
+        ("i" "Idea" entry (file "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org")
          "* %? :IDEA: \n%U" :clock-in t :clock-resume t)
-        ("x" "Next Task" entry (file+headline "/home/ayonga/Dropbox/notes/capture_notes.org" "Tasks")
+        ("x" "Next Task" entry (file+headline "d:/Dropbox/Dropbox (Personal)/notes/capture_notes.org" "Tasks")
          "** NEXT %? \nDEADLINE: %t") ))
 
 ;; (setq org-capture-templates
