@@ -1,5 +1,5 @@
-;;; -*- lexical-binding: t -*-
-;;; package -- Summary
+;; -*- lexical-binding: t -*-
+(setq debug-on-error t)
 
 ;;; Commentary:
 ;;; This file bootstraps the configuration, which is divided into
