@@ -165,6 +165,7 @@
 (require 'init-cquery)
 
 (require-package 'realgud)
+(require-package 'cuda-mode)
 ;; (require 'realgud)
 
 
