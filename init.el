@@ -1,5 +1,5 @@
-;;; -*- lexical-binding: t -*-
-;;; package -- Summary
+;; -*- lexical-binding: t -*-
+(setq debug-on-error t)
 
 ;;; Commentary:
 ;;; This file bootstraps the configuration, which is divided into
@@ -59,6 +59,7 @@
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'command-log-mode)
+(require-package 'use-package)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
@@ -102,7 +103,7 @@
 (require 'init-markdown)
 (require 'init-csv)
 ;;(require 'init-erlang)
-;;(require 'init-javascript)
+(require 'init-javascript)
 ;;(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
@@ -153,7 +154,19 @@
 ;; (require 'init-ros)
 (require 'init-matlab-mode)
 
+(require 'init-clang)
+(require 'init-ccmode)
+;;(require 'init-counsel-etags)
 
+;;(require 'init-ycmd)
+
+(require 'init-cmake)
+(require 'init-lsp)
+(require 'init-cquery)
+
+(require-package 'realgud)
+(require-package 'cuda-mode)
+;; (require 'realgud)
 
 
 ;;;;(require 'init-twitter)
@@ -195,6 +208,7 @@
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
+
 
 
 ;;----------------------------------------------------------------------------

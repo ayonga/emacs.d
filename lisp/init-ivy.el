@@ -73,6 +73,9 @@ instead."
 
     (define-key ivy-mode-map (kbd "M-s /") 'sanityinc/swiper-at-point)))
 
+(global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "C-r") 'swiper)
+
 (setq counsel-find-file-at-point t)
 
 (when (maybe-require-package 'ivy-xref)
