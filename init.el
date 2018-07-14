@@ -28,7 +28,7 @@
   (add-hook 'after-init-hook
             (lambda ()
               (setq gc-cons-threshold normal-gc-cons-threshold))))
-
+(set-face-attribute 'default nil :family "Consolas" :height 110)
 ;;
 ;;  This makes Emacs ignore the "-e (make-frame-visible)"
 ;;  that it gets passed when started by emacsclientw.
@@ -103,12 +103,12 @@
 (require 'init-markdown)
 (require 'init-csv)
 ;;(require 'init-erlang)
-(require 'init-javascript)
+;;(require 'init-javascript)
 ;;(require 'init-php)
 (require 'init-org)
-(require 'init-nxml)
-(require 'init-html)
-(require 'init-css)
+;;(require 'init-nxml)
+;;(require 'init-html)
+;;(require 'init-css)
 ;;(require 'init-haml)
 ;;(require 'init-http)
 (require 'init-python)
@@ -126,12 +126,12 @@
 ;;(require 'init-nix)
 ;;(maybe-require-package 'nginx-mode)
 
-(require 'init-paredit)
-(require 'init-lisp)
-(require 'init-slime)
-(require 'init-clojure)
-(require 'init-clojure-cider)
-(require 'init-common-lisp)
+;;(require 'init-paredit)
+;;(require 'init-lisp)
+;;(require 'init-slime)
+;;(require 'init-clojure)
+;;(require 'init-clojure-cider)
+;;(require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
@@ -152,7 +152,7 @@
 (require 'init-org-ref)
 
 ;; (require 'init-ros)
-(require 'init-matlab-mode)
+;; (require 'init-matlab-mode)
 
 (require 'init-clang)
 (require 'init-ccmode)
@@ -165,7 +165,7 @@
 (require 'init-cquery)
 
 (require-package 'realgud)
-(require-package 'cuda-mode)
+;; (require-package 'cuda-mode)
 ;; (require 'realgud)
 
 

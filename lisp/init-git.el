@@ -105,7 +105,7 @@
 (set-variable 'git-gutter:modified-sign "  ")
 (set-variable 'git-gutter:added-sign "++")
 (set-variable 'git-gutter:deleted-sign "--")
-(set-variable 'git-gutter:update-interval 5)
+(set-variable 'git-gutter:update-interval 0)
 (set-face-background 'git-gutter:modified "purple") ;; background color
 (set-face-foreground 'git-gutter:added "green")
 (set-face-foreground 'git-gutter:deleted "red")
