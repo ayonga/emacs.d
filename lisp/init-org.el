@@ -54,6 +54,11 @@
       (url-copy-file url org-plantuml-jar-path))))
 
 
+;; Re-align tags when window shape changes
+(after-load 'org-agenda
+  (add-hook 'org-agenda-mode-hook
+            (lambda () (add-hook 'window-configuration-change-hook 'org-agenda-align-tags nil t))))
+
 
 
 
@@ -104,25 +109,27 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-default-notes-file "/home/ayonga/Dropbox/notes/notes.org")
+(if *is-a-unix*
+	(setq org-default-notes-file "/home/ayonga/Dropbox/notes/notes.org")
 
-(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes"
-                               "/home/ayonga/Dropbox/notes/projects"
-                               "/home/ayonga/Dropbox/notes/task_archive"
-                               "/home/ayonga/Dropbox/notes/tutorials"
-                               "/home/ayonga/Dropbox/notes/references")))
+	(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes"
+		                       "/home/ayonga/Dropbox/notes/projects"
+		                       "/home/ayonga/Dropbox/notes/task_archive"
+		                       "/home/ayonga/Dropbox/notes/tutorials"
+		                       "/home/ayonga/Dropbox/notes/references")))
 
-(setq org-capture-templates
-      '(("t" "todo" entry (file "/home/ayonga/Dropbox/notes/tasks.org")
-         "* TODO %? :TASK: \n%U\n%a\n" :clock-in t :clock-resume t)
-        ("n" "note" entry (file "/home/ayonga/Dropbox/notes/notes.org")
-         "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-        ("m" "Meeting" entry (file "/home/ayonga/Dropbox/notes/notes.org")
-         "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
-        ("i" "Idea" entry (file "/home/ayonga/Dropbox/notes/notes.org")
-         "* %? :IDEA: \n%U" :clock-in t :clock-resume t)
-        ("x" "Next Task" entry (file+headline "/home/ayonga/Dropbox/notes/tasks.org" "Tasks")
-         "** NEXT %? :TASK: \nDEADLINE: %t") ))
+	(setq org-capture-templates
+	      '(("t" "todo" entry (file "/home/ayonga/Dropbox/notes/tasks.org")
+		 "* TODO %? :TASK: \n%U\n%a\n" :clock-in t :clock-resume t)
+		("n" "note" entry (file "/home/ayonga/Dropbox/notes/notes.org")
+		 "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+		("m" "Meeting" entry (file "/home/ayonga/Dropbox/notes/notes.org")
+		 "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
+		("i" "Idea" entry (file "/home/ayonga/Dropbox/notes/notes.org")
+		 "* %? :IDEA: \n%U" :clock-in t :clock-resume t)
+		("x" "Next Task" entry (file+headline "/home/ayonga/Dropbox/notes/tasks.org" "Tasks")
+		 "** NEXT %? :TASK: \nDEADLINE: %t") ))
+)
 
 ;; (setq org-capture-templates
 ;;       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'

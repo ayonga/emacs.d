@@ -2,10 +2,10 @@
 (setq user-full-name "Ayonga Hereid")
 (setq user-mail-address "ayonga27@gmail.com")
 
-(when *is-a-windows*
-  (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")  ; add aspell directory to emacs configuration
-  (setq grep-find-command '("findstr /sn  *" . 13))
-  (setq default-directory "~/"))
+;; (when *is-a-windows*
+;;   (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")  ; add aspell directory to emacs configuration
+;;   (setq grep-find-command '("findstr /sn  *" . 13))
+;;   (setq default-directory "~/"))
 
 ;;; custom UI setttings from Prelude
 
@@ -20,9 +20,9 @@
 ;;;highlight the current row
 (require-package 'hl-line)
 (global-hl-line-mode t)
+(menu-bar-mode 1)
 
-
-;; sensible undo
+;; Sensible undo
 (defalias 'redo 'undo-tree-redo)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
