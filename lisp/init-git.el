@@ -80,8 +80,8 @@
   (setq git-messenger:show-detail t)
   (define-key vc-prefix-map (kbd "p") #'git-messenger:popup-message))
 
-(require-package 'git-gutter)
-(global-git-gutter-mode +1)
+;; (require-package 'git-gutter)
+;; (global-git-gutter-mode +1)
 
 ;; ;; If you would like to use git-gutter.el and linum-mode
 ;; (git-gutter:linum-setup)
@@ -102,12 +102,12 @@
 ;; ;; Mark current hunk
 ;; (global-set-key (kbd "C-x v SPC") #'git-gutter:mark-hunk)
 
-(set-variable 'git-gutter:modified-sign "  ")
-(set-variable 'git-gutter:added-sign "++")
-(set-variable 'git-gutter:deleted-sign "--")
-(set-variable 'git-gutter:update-interval 5)
-(set-face-background 'git-gutter:modified "purple") ;; background color
-(set-face-foreground 'git-gutter:added "green")
-(set-face-foreground 'git-gutter:deleted "red")
+;; (set-variable 'git-gutter:modified-sign "  ")
+;; (set-variable 'git-gutter:added-sign "++")
+;; (set-variable 'git-gutter:deleted-sign "--")
+;; (set-variable 'git-gutter:update-interval 5)
+;; (set-face-background 'git-gutter:modified "purple") ;; background color
+;; (set-face-foreground 'git-gutter:added "green")
+;; (set-face-foreground 'git-gutter:deleted "red")
 
 (provide 'init-git)
