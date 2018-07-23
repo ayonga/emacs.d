@@ -109,7 +109,7 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(if *is-a-unix*
+(if *is-a-linux*
 	(setq org-default-notes-file "/home/ayonga/Dropbox/notes/notes.org")
 
 	(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes"

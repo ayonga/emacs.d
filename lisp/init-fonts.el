@@ -16,7 +16,7 @@ This is helpful for writeroom-mode, in particular."
           'sanityinc/maybe-adjust-visual-fill-column)
 
 (when *is-a-windows*
-  (set-frame-font "-outline-Courier New-normal-normal-normal-mono-14-*-*-*-c-*-iso8859-1"))
+  (set-frame-font "-outline-Consolas-normal-normal-normal-mono-14-*-*-*-c-*-iso8859-1"))
 
 
 (provide 'init-fonts)
