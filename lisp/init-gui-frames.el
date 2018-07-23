@@ -1,14 +1,13 @@
 ;;----------------------------------------------------------------------------
 ;; Stop C-z from minimizing windows under OS X
 ;;----------------------------------------------------------------------------
-(if *is-a-mac*
-    (defun sanityinc/maybe-suspend-frame ()
-      (interactive)
-      (unless (and *is-a-mac* window-system)
-	(suspend-frame)))
-  
-  (global-set-key (kbd "C-z") 'sanityinc/maybe-suspend-frame)
-)
+(defun sanityinc/maybe-suspend-frame ()
+  (interactive)
+  (unless (and *is-a-mac* window-system)
+    (suspend-frame)))
+
+(global-set-key (kbd "C-z") 'sanityinc/maybe-suspend-frame)
+
 
 ;;----------------------------------------------------------------------------
 ;; Suppress GUI features
@@ -24,7 +23,7 @@
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
-  (set-scroll-bar-mode nil))
+  (set-scroll-bar-mode t))
 
 ;; I generally prefer to hide the menu bar, but doing this on OS X
 ;; simply makes it update unreliably in GUI frames, so we make an
@@ -36,7 +35,7 @@
                                      (if (display-graphic-p frame)
                                          1 0))))
   (when (fboundp 'menu-bar-mode)
-    (menu-bar-mode 1))) ;; enable menu-bar-mode for Linux too
+    (menu-bar-mode 1)))
 
 (when (fboundp 'pixel-scroll-mode)
   (pixel-scroll-mode 1))
@@ -79,8 +78,8 @@
           (lambda ()
             (setq line-spacing 0)))
 
-;;(require-package 'disable-mouse)
-
+
+(require-package 'disable-mouse)
 
 
 (provide 'init-gui-frames)

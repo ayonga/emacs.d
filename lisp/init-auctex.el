@@ -24,7 +24,7 @@
             'visual-line-mode
             'turn-on-cdlatex))
 
-(setq reftex-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib"))
+;;(setq reftex-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib"))
 
 
 (add-hook 'LaTeX-mode-hook

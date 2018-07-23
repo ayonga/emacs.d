@@ -1,7 +1,7 @@
 ;; save a list of open files in ~/.emacs.d/.emacs.desktop
 (setq desktop-path (list user-emacs-directory)
       desktop-auto-save-timeout 600)
-(desktop-save-mode 1)
+(desktop-save-mode 0)
 
 (defadvice desktop-read (around time-restore activate)
     (let ((start-time (current-time)))
@@ -45,7 +45,7 @@
                 (dired-regexp-history     . 20)
                 (extended-command-history . 30)
                 (face-name-history        . 20)
-                (file-name-history        . 100)
+                (file-name-history        . 4)
                 (grep-find-history        . 30)
                 (grep-history             . 30)
                 (ido-buffer-history       . 100)
