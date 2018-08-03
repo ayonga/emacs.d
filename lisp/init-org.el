@@ -382,6 +382,10 @@ typical word processor."
     (define-key org-mode-map (kbd "M-h") nil)
     (define-key org-mode-map (kbd "C-c g") 'org-mac-grab-link)))
 
+;; setup matlab in babel
+(setq org-babel-default-header-args:matlab
+  '((:results . "output") (:session . "*MATLAB*")))
+
 (after-load 'org
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -398,6 +402,7 @@ typical word processor."
      (plantuml . t)
      (python . t)
      (ruby . t)
+     (matlab . t)
      (screen . nil)
      (,(if (locate-library "ob-sh") 'sh 'shell) . t)
      (sql . nil)
