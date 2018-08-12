@@ -6,5 +6,7 @@
  '("\\.m$" . matlab-mode))
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
+(setq matlab-shell-command-switches '("-nodesktop -nosplash"))
+
 
 (provide 'init-matlab-mode)
