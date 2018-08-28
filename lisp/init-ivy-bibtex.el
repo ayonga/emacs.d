@@ -10,12 +10,12 @@
         (t . ivy--regex-plus)))
 
 (setq bibtex-completion-bibliography
-      '("c:/Users/ayonga/OneDrive/JabRef/reference.bib"))
+      '("/home/ayonga/Papers/bibliography/references.bib"))
 
 (setq bibtex-completion-library-path
-      '("C:/Users/ayonga/OneDrive/JabRef/pdfs"))
+      '("/home/ayonga/Papers/bibliography/pdf/"))
 
-(setq bibtex-completion-notes-path "C:/Users/ayonga/OneDrive/JabRef/notes/reference_notes.org")
+(setq bibtex-completion-notes-path "/home/ayonga/Dropbox/notes/references.org")
 
 (setq bibtex-completion-pdf-field "file")
 

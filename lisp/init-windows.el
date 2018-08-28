@@ -9,6 +9,8 @@
 ;;----------------------------------------------------------------------------
 (add-hook 'after-init-hook 'winner-mode)
 
+(add-to-list 'default-frame-alist '(height . 60))
+(add-to-list 'default-frame-alist '(width . 150))
 
 
 ;; Make "C-x o" prompt for a target window when there are more than 2

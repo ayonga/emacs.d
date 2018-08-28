@@ -154,9 +154,8 @@
 ;;(require 'init-lsp)
 ;;(require 'init-cquery)
 
-;;(require-package 'realgud)
+(require-package 'realgud)
 (require-package 'cuda-mode)
-
 
 
 ;;;;(require 'init-twitter)
@@ -224,3 +223,4 @@
 ;; End:
 
 ;;; init.el ends here
+(put 'set-goal-column 'disabled nil)

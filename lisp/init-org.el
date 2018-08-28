@@ -8,6 +8,8 @@
 
 ;; Various preferences
 (setq org-log-done t
+      org-M-RET-may-split-lien nil
+      org-startup-indented t
       org-edit-timestamp-down-means-later t
       org-archive-mark-done nil
       org-hide-emphasis-markers t
@@ -110,9 +112,11 @@ typical word processor."
 (global-set-key (kbd "C-c c") 'org-capture)
 
 
-(setq org-default-notes-file "/home/ayonga/Dropbox/notes/notes.org")
+(setq org-default-notes-file
+      "/home/ayonga/Dropbox/notes/notes.org")
 
-(setq org-agenda-files (quote ("/home/ayonga/Dropbox/notes")))
+(setq org-agenda-files
+      (file-expand-wildcards "/home/ayonga/Dropbox/notes/*.org"))
 
 
 (setq org-capture-templates

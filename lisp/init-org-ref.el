@@ -3,9 +3,9 @@
 ;;(require-package 'org-plus-contrib)
 
 
-(setq org-ref-default-bibliography '("/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/reference.bib")
-      org-ref-pdf-directory "/home/ayonga/Dropbox_Lab/TeamWide/Ayonga/Bibliography/pdfs/"
-      org-ref-bibliography-notes "/home/ayonga/Dropbox/notes/reference_notes.org")
+(setq org-ref-default-bibliography '("/home/ayonga/Papers/bibliography/references.bib")
+      org-ref-pdf-directory "/home/ayonga/Papers/bibliography/pdf/"
+      org-ref-bibliography-notes "/home/ayonga/Dropbox/notes/references.org")
 
 
 
@@ -24,16 +24,16 @@
         "pdflatex -interaction nonstopmode -output-directory %o %f"
         "pdflatex -interaction nonstopmode -output-directory %o %f"))
 
-(setq bibtex-autokey-year-length 4
-      bibtex-autokey-name-year-separator ""
-      bibtex-autokey-year-title-separator ""
-      bibtex-autokey-titleword-separator ""
-      bibtex-autokey-titlewords 1
-      bibtex-autokey-titlewords-stretch 1
-      bibtex-autokey-titleword-length nil
-      bibtex-autokey-name-length nil
-      bibtex-autokey-name-case-convert-function (quote capitalize)
-      bibtex-autokey-titleword-case-convert-function (quote capitalize))
+;; (setq bibtex-autokey-year-length 4
+;;       bibtex-autokey-name-year-separator ""
+;;       bibtex-autokey-year-title-separator ""
+;;       bibtex-autokey-titleword-separator ""
+;;       bibtex-autokey-titlewords 1
+;;       bibtex-autokey-titlewords-stretch 1
+;;       bibtex-autokey-titleword-length nil
+;;       bibtex-autokey-name-length nil
+;;       bibtex-autokey-name-case-convert-function (quote capitalize)
+;;       bibtex-autokey-titleword-case-convert-function (quote capitalize))
 
 ;; (setq org-latex-default-packages-alist
 ;;       (-remove-item
