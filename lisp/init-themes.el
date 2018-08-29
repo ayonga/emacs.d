@@ -14,7 +14,7 @@
 ;; (add-hook 'after-init-hook 'reapply-themes)
 
 ;; theme
-(defvar my:theme 'sanityinc-solarized-dark)
+(defvar my:theme 'sanityinc-tomorrow-eighties)
 (defvar my:theme-window-loaded nil)
 (defvar my:theme-terminal-loaded nil)
 

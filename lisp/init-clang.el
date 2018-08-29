@@ -14,12 +14,15 @@
 
 (require-package 'google-c-style)
 (require 'google-c-style)
-;;(require 'google-set-c-style)
+
+;; (require 'google-set-c-style)
 ;; This prevents the extra two spaces in a namespace that Emacs
 ;; otherwise wants to put... Gawd!
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 ;; Autoindent using google style guide
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+
 
 
 (provide 'init-clang)

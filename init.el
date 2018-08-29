@@ -112,7 +112,7 @@
 ;; (require 'init-rust)
 ;; (require 'init-toml)
 (require 'init-yaml)
-;; (require 'init-docker)
+(require 'init-docker)
 ;; (require 'init-terraform)
 ;; (require 'init-nix)
 ;; (maybe-require-package 'nginx-mode)
@@ -142,16 +142,21 @@
 ;;(require 'init-org-ref)
 
 ;; (require 'init-ros)
-(require 'init-matlab-mode)
+;; (require 'init-matlab-mode)
 
 (require 'init-clang)
 (require 'init-ccmode)
+(require 'init-cmake)
+(require 'init-irony)
+(require 'init-rtags)
+
+
 ;;(require 'init-counsel-etags)
 
 ;;;;(require 'init-ycmd)
 
-(require 'init-cmake)
-;;(require 'init-lsp)
+
+;; (require 'init-lsp)
 ;;(require 'init-cquery)
 
 (require-package 'realgud)

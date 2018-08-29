@@ -112,7 +112,8 @@
 ;; (setq undo-tree-history-directory-alist
 ;;       `((".*" . ,temporary-file-directory)))
 ;; (setq undo-tree-auto-save-history t)
-
+(global-unset-key "\C-z")
+(global-set-key "\C-z" 'advertised-undo)
 
 (when (maybe-require-package 'symbol-overlay)
   (dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook yaml-mode-hook conf-mode-hook Latex-mode-hook))

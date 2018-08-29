@@ -1,5 +1,11 @@
 (require-package 'lsp-mode)
 (require 'lsp-mode)
+
+(require-package 'company-lsp)
+(require 'company-lsp)
+(push 'company-lsp company-backends)
+(add-hook 'after-init-hook 'global-company-mode)
+
 (lsp-define-stdio-client
  ;; This can be a symbol of your choosing. It will be used as a the
  ;; prefix for a dynamically generated function "-enable"; in this
@@ -27,10 +33,10 @@
 (require 'lsp-imenu)
 (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
 
-(defun my-set-projectile-root ()
-  (when lsp--cur-workspace
-    (setq projectile-project-root (lsp--workspace-root lsp--cur-workspace))))
-(add-hook 'lsp-before-open-hook #'my-set-projectile-root)
+;; (defun my-set-projectile-root ()
+;;   (when lsp--cur-workspace
+;;     (setq projectile-project-root (lsp--workspace-root lsp--cur-workspace))))
+;; (add-hook 'lsp-before-open-hook #'my-set-projectile-root)
 
 
 (require-package 'lsp-ui)
@@ -41,6 +47,14 @@
 
 (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
 (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
+
+
+(require-package 'lsp-clangd)
+(with-eval-after-load 'lsp-mode
+  (require 'lsp-clangd)
+  (add-hook 'c-mode--hook #'lsp-clangd-c-enable)
+  (add-hook 'c++-mode-hook #'lsp-clangd-c++-enable)
+  (add-hook 'objc-mode-hook #'lsp-clangd-objc-enable))
 
 ;;(lsp-ui-peek-jump-backward)
 ;;(lsp-ui-peek-jump-forward)
