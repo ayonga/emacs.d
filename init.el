@@ -144,7 +144,7 @@
 ;; (require 'init-ros)
 ;; (require 'init-matlab-mode)
 
-(require 'init-clang)
+;; (require 'init-clang)
 (require 'init-ccmode)
 (require 'init-cmake)
 (require 'init-irony)
