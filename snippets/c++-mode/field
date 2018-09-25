@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: field
+# key: field
+# --
+
+static std::string const $1("$2"); /// < $3
