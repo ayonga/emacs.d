@@ -52,6 +52,8 @@
 (require-package 'tablist)
 ;;(require-package 'use-package)
 
+(set-face-attribute 'default nil :family "Consolas" :height 110)
+
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
